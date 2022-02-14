@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @page { 
+            size: 3.45in 2.145in;
+            /* size: 3.78in 2.25in; */
+            margin: 0 
+        }
+        html, body {
+            height: 100%;
+            margin: 0px;
+        }
+        .barcode-container img {
+            padding-top: 1.1in;
+            display: block;
+            margin: 0 auto;
+            max-height: 1in;
+        }
+    </style>
+</head>
+<body>
+    <div class="barcode-container">
+        <img id="barcode"/>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/JsBarcode.all.min.js"></script>
+    <script>
+        JsBarcode(`#barcode`, "11111-2222222-3");
+    </script>
+</body>
+</html>
